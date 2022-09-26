@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 public class Utils {
 
     public List<List<Integer>> targetSumNodeList;
-
     public void findAllPathSum(TreeNode root, int targetSum, List<Integer> currentPathList){
         if( root == null) {
             return;
