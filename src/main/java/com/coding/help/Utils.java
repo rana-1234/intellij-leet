@@ -6,10 +6,20 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 public class Utils {
 
     public List<List<Integer>> targetSumNodeList;
+
+    public static void printArray(Object [] toArray) {
+        System.out.print("Printing Array : [");
+        for(int i = 0 ; i < toArray.length ; i++){
+            System.out.print(toArray[i] + " ");
+        }
+        System.out.println("]");
+    }
+
     public void findAllPathSum(TreeNode root, int targetSum, List<Integer> currentPathList){
         if( root == null) {
             return;

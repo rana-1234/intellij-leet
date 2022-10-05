@@ -16,6 +16,14 @@
       </plugin>
     </plugins>
   </build>
-  <name>Archetype - coding</name>
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+    <name>Archetype - coding</name>
   <url>http://maven.apache.org</url>
 </project>
