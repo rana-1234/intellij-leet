@@ -1,0 +1,203 @@
+Key Concepts
+
+1. AWS CDK App
+    An app defines one or more stacks. Stacks (equivalent to AWS CloudFormation stacks) contain constructs, each of which defines one or more concrete AWS resources, such as Amazon S3 buckets, Lambda functions, Amazon DynamoDB tables, and so on.
+
+2. Constructs
+     Constructs (as well as stacks and apps) are represented as classes (types) in your programming language of choice. You instantiate constructs within a stack to declare them to AWS, and connect them to each other using well-defined interfaces.
+
+The AWS CDK includes a library of AWS constructs called the AWS Construct Library
+    `npm install aws-cdk-lib`
+            => it contains the majority of AWS constructs along with base classes Stack and App
+    import `aws-cdk-lib` as cdk;
+        If you created a CDK project using cdk init, you won't need to manually install aws-cdk-lib.
+
+
+Constructs come in three fundamental flavors
+
+1. AWS CloudFormation-only or L1 (short for "layer 1").
+        These constructs correspond directly to resource types defined by AWS CloudFormation.
+        AWS CloudFormation resources always have names that begin with Cfn
+
+        For e.g.
+            AWS S3 Service, `CfnBucket` is the L1 construct for an Amazon S3 bucket.
+        All L1 constructs come from aws-cdk-lib
+
+2. Curated or L2
+        These constructs are carefully developed by the AWS CDK team to address specific use cases and simplify infrastructure development.
+
+        For the most part, they encapsulate L1 resources, providing sensible defaults and best-practice security policies.
+        For example, `Bucket` is the L2 construct for an Amazon S3 bucket.
+
+        `aws-cdk-lib` contains L2 constructs that are designated stable, i.e., ready for production use.
+
+3. Pattern or L3
+     Patterns declare multiple resources to create entire AWS architectures for particular use cases.
+     All the plumbing is already hooked up, and configuration is boiled down to a few important parameters.
+
+     As with L2 constructs, L3 constructs that are ready for production use (stable) are included in aws-cdk-lib,
+     while those still under development are in separate modules.
+
+E.g.
+
+    const bucket = new s3.Bucket(this, 'MyBucket', {
+      bucketName: 'my-bucket',
+      versioned: true,
+      websiteRedirect: {hostName: 'aws.amazon.com'}});
+
+TypeScript was the first language supported by the AWS CDK, and much AWS CDK example code is written in TypeScript.
+
+Prerequisite
+    -- TypeScript 3.8 or later (npm -g install typescript)
+    -- npm install -g aws-cdk
+    -- cdk --version
+    -- Make sure you have already configured your aws account `aws configure` command.
+    -- Alternatively, you can set the environment variables
+            AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, and AWS_DEFAULT_REGION to appropriate values.
+
+
+************ Bootstrapping ************
+    Deploying stacks with the AWS CDK requires dedicated Amazon S3 buckets and other containers to be available to AWS CloudFormation during deployment.
+    Creating these is called bootstrapping.
+
+    Command
+        cdk bootstrap aws://<AWS-ACCOUNT-ID>//<Region>
+
+    Other
+        Get the aws account id
+            aws sts get-caller-identity
+        If you have created named profiles in your local AWS configuration
+            aws sts get-caller-identity --profile prod
+        To display the region
+            aws configure get region
+            aws configure get region --profile prod
+
+
+********** Build the App *************
+In most programming environments, after making changes to your code, you'd build (compile) it.
+This isn't strictly necessary with the AWS CDK—the Toolkit does it for you so you can't forget.
+But you can still build manually whenever you want to catch syntax and type errors. For reference, here's how.
+
+`npm run build`
+
+List the stacks in the app
+`cdk ls`
+
+
+Add an Amazon S3 bucket
+Its simple just add
+
+import * as cdk from 'aws-cdk-lib';
+import { aws_s3 as s3 } from 'aws-cdk-lib';
+
+export class HelloCdkStack extends cdk.Stack {
+  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
+    super(scope, id, props);
+
+    new s3.Bucket(this, 'MyFirstBucket', {
+      versioned: true
+    });
+  }
+}
+
+*********** Basically almost all constructs takes 3 params *******************
+
+   scope :
+        Tells the bucket that the stack is its parent: it is defined within the scope of the stack.
+        You can define constructs inside of constructs, creating a hierarchy (tree).
+        Here, and in most cases, the scope is `this` (self in Python),
+            meaning the construct that contains the bucket: the stack (Hello Stack construct itself)
+   id:
+        The logical ID of the Bucket/Construct within your AWS CDK app
+        This (`plus a hash based on the bucket's location within the stack`) uniquely identifies the bucket across deployments
+        So the AWS CDK can update it if you change how it's defined in your app.
+        Here it is "MyFirstBucket." Buckets can also have a name, which is separate from this ID (it's the bucketName property).
+
+   props:
+        A bundle of values that define properties of the bucket/Construct.
+        Here we've defined only one property: versioned, which enables versioning for the files in the bucket.
+
+Check the link for demo purpose :
+
+
+*************** Synthesize an AWS CloudFormation template **********************
+cdk synth
+If your app contained more than one stack,
+    you'd need to specify which stack(s) to synthesize.
+    But since it only contains one, the CDK Toolkit knows you must mean that one.
+Or you can pass --all flag to synthesize all
+
+
+********************** Deploying the stack *********************
+cdk deploy
+    (Same here if there is multiple stacks you need to pass that arguments)
+
+************** CDK diff **********************
+When you make some code changes in some stack, you can run cdk diff command to check what changes you are going to make
+cdk diff <Stack Name or --all>
+
+cdk diff has three sections
+
+Stack HelloCdkStack
+IAM Statement Changes
+┌───┬──────────────────────────────┬────────┬──────────────────────────────┬──────────────────────────────┬───────────┐
+│   │ Resource                     │ Effect │ Action                       │ Principal                    │ Condition │
+├───┼──────────────────────────────┼────────┼──────────────────────────────┼──────────────────────────────┼───────────┤
+│ + │ ${Custom::S3AutoDeleteObject │ Allow  │ sts:AssumeRole               │ Service:lambda.amazonaws.com │           │
+│   │ sCustomResourceProvider/Role │        │                              │                              │           │
+│   │ .Arn}                        │        │                              │                              │           │
+├───┼──────────────────────────────┼────────┼──────────────────────────────┼──────────────────────────────┼───────────┤
+│ + │ ${MyFirstBucket.Arn}         │ Allow  │ s3:DeleteObject*             │ AWS:${Custom::S3AutoDeleteOb │           │
+│   │ ${MyFirstBucket.Arn}/*       │        │ s3:GetBucket*                │ jectsCustomResourceProvider/ │           │
+│   │                              │        │ s3:GetObject*                │ Role.Arn}                    │           │
+│   │                              │        │ s3:List*                     │                              │           │
+└───┴──────────────────────────────┴────────┴──────────────────────────────┴──────────────────────────────┴───────────┘
+IAM Policy Changes
+┌───┬────────────────────────────────────────────────────────┬────────────────────────────────────────────────────────┐
+│   │ Resource                                               │ Managed Policy ARN                                     │
+├───┼────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────┤
+│ + │ ${Custom::S3AutoDeleteObjectsCustomResourceProvider/Ro │ {"Fn::Sub":"arn:${AWS::Partition}:iam::aws:policy/serv │
+│   │ le}                                                    │ ice-role/AWSLambdaBasicExecutionRole"}                 │
+└───┴────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────┘
+(NOTE: There may be security-related changes not in this list. See https://github.com/aws/aws-cdk/issues/1299)
+
+Parameters
+[+] Parameter AssetParameters/4cd61014b71160e8c66fe167e43710d5ba068b80b134e9bd84508cf9238b2392/S3Bucket AssetParameters4cd61014b71160e8c66fe167e43710d5ba068b80b134e9bd84508cf9238b2392S3BucketBF7A7F3F: {"Type":"String","Description":"S3 bucket for asset \"4cd61014b71160e8c66fe167e43710d5ba068b80b134e9bd84508cf9238b2392\""}
+[+] Parameter AssetParameters/4cd61014b71160e8c66fe167e43710d5ba068b80b134e9bd84508cf9238b2392/S3VersionKey AssetParameters4cd61014b71160e8c66fe167e43710d5ba068b80b134e9bd84508cf9238b2392S3VersionKeyFAF93626: {"Type":"String","Description":"S3 key for asset version \"4cd61014b71160e8c66fe167e43710d5ba068b80b134e9bd84508cf9238b2392\""}
+[+] Parameter AssetParameters/4cd61014b71160e8c66fe167e43710d5ba068b80b134e9bd84508cf9238b2392/ArtifactHash AssetParameters4cd61014b71160e8c66fe167e43710d5ba068b80b134e9bd84508cf9238b2392ArtifactHashE56CD69A: {"Type":"String","Description":"Artifact hash for asset \"4cd61014b71160e8c66fe167e43710d5ba068b80b134e9bd84508cf9238b2392\""}
+
+Resources
+[+] AWS::S3::BucketPolicy MyFirstBucket/Policy MyFirstBucketPolicy3243DEFD
+[+] Custom::S3AutoDeleteObjects MyFirstBucket/AutoDeleteObjectsCustomResource MyFirstBucketAutoDeleteObjectsCustomResourceC52FCF6E
+[+] AWS::IAM::Role Custom::S3AutoDeleteObjectsCustomResourceProvider/Role CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092
+[+] AWS::Lambda::Function Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F
+[~] AWS::S3::Bucket MyFirstBucket MyFirstBucketB8884501
+ ├─ [~] DeletionPolicy
+ │   ├─ [-] Retain
+ │   └─ [+] Delete
+ └─ [~] UpdateReplacePolicy
+     ├─ [-] Retain
+     └─ [+] Delete
+
+
+Three sections:
+
+    1. IAM Statement Changes and IAM Policy Changes
+            => this tells what are the roles and policy getting granted or removed.
+
+    2. Parameters
+        => The AWS CDK uses these entries to locate the Lambda function asset for the custom resource.
+
+    3. Resources
+           => The new and changed resources in this stack. We can see the aforementioned IAM objects, the custom resource, and its associated Lambda function
+           being added.
+           We can also see that the bucket's DeletionPolicy and UpdateReplacePolicy attributes are being updated.
+           These allow the bucket to be deleted along with the stack, and to be replaced with a new one.
+
+******************* Destroying the app's resources ***************************
+cdk destroy <Stack id>
+ -- it will delete all the resources which got created as part of this stack
+
+
+
+
