@@ -1,0 +1,44 @@
+****************** Wait ******************
+A Wait state ("Type": "Wait") delays the state machine from continuing for a specified time. You can choose either a relative time, specified in seconds from when the state begins, or an absolute end time, specified as a timestamp.
+
+One of the following field is required in Wait state
+
+Seconds
+A time, in seconds, to wait before beginning the state specified in the Next field. You must specify time as a positive, integer value.
+
+Timestamp
+    An absolute time to wait until beginning the state specified in the Next field.
+
+    Timestamps must conform to the RFC3339 profile of ISO 8601, with the further restrictions that an uppercase T must separate the date and time portions, and an uppercase Z must denote that a numeric time zone offset is not present, for example, 2016-08-18T17:33:00Z.
+
+SecondsPath
+    A time, in seconds, to wait before beginning the state specified in the Next field, specified using a path from the state's input data.
+
+TimestampPath
+    An absolute time to wait until beginning the state specified in the Next field, specified using a path from the state's input data.
+
+E.g.
+
+    "wait_ten_seconds": {
+      "Type": "Wait",
+      "Seconds": 10,
+      "Next": "NextState"
+    }
+
+    "wait_until" : {
+      "Type": "Wait",
+      "Timestamp": "2016-03-14T01:59:00Z",
+      "Next": "NextState"
+    }
+
+    ===================
+    {
+      "expirydate": "2016-03-14T01:59:00Z"
+    }
+
+    "wait_until" : {
+        "Type": "Wait",
+        "TimestampPath": "$.expirydate",
+        "Next": "NextState"
+    }
+    =======================

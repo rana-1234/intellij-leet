@@ -1,0 +1,19 @@
+******************** Fail State ***************
+
+A Fail state ("Type": "Fail") stops the execution of the state machine and marks it as a failure, unless it is caught by a Catch block.
+
+Additional Fields
+
+    Cause (Optional)
+        A custom failure string that you can specify for operational or diagnostic purposes.
+
+    Error (Optional)
+         An error name that you can provide for operational or diagnostic purposes.
+
+Because Fail states always exit the state machine, they have no Next field and don't require an End field.
+    "FailState": {
+      "Type": "Fail",
+      "Cause": "Invalid response.",
+      "Error": "ErrorA"
+    }
+

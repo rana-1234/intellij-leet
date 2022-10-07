@@ -1,0 +1,221 @@
+********************** How step function works **************
+
+When you create a state machine, you can select a Type of either Standard (default) or Express
+The Type you choose cannot be changed after your state machine has been created.
+
+
+Standard Workflows are ideal for long-running, durable, and auditable workflows.
+They can run for up to a year and you can retrieve the full execution history using the Step Functions API, up to 90 days after your execution completes
+ Standard Workflows employ an exactly-once model, where your tasks and states are never executed more than once unless you have specified Retry behavior in ASL (Amazon States Language)
+
+Express Workflows are ideal for high-volume, event-processing workloads such as IoT data ingestion, streaming data processing and transformation, and mobile application backends.
+They can run for up to five minutes. Express Workflows employ an at-least-once model, where there is a possibility that an execution might be run more than once.
+
+Checkout the difference here : https://docs.aws.amazon.com/step-functions/latest/dg/concepts-standard-vs-express.html
+
+*********** Synchronous and Asynchronous Express Workflows ***********
+    Asynchronous Express Workflows return confirmation that the workflow was started, but do not wait for the workflow to complete.To get the result, you must poll the service's CloudWatch Logs. Asynchronous Express Workflows can be used when you don't require immediate response output,
+
+    Synchronous Express Workflows start a workflow, wait until it completes, then return the result. Synchronous Express Workflows can be used to orchestrate microservices,
+
+Execution Guarantee
+Standard Workflows :- Exactly once
+Asynchronous Express Workflows :- At least once
+Synchronous Express Workflows :- At most once
+
+************************ States *************************
+Individual states can make decisions based on their input, perform actions, and pass output to other states
+In AWS Step Functions you define your workflows in the Amazon States Language.
+
+States are elements in your state machine. A state is referred to by its name, which can be any string, but which must be unique within the scope of the entire state machine.
+
+States can perform a variety of functions in your state machine:
+    1. Do some work in your state machine (a Task state)
+    2. Make a choice between branches of execution (a Choice state)
+    3. Stop an execution with a failure or success (a Fail or Succeed state)
+    4. Simply pass its input to its output or inject some fixed data (a Pass state)
+    5. Provide a delay for a certain amount of time or until a specified time/date (a Wait state)
+    6. Begin parallel branches of execution (a Parallel state)
+    7. Dynamically iterate steps (a Map state)
+
+E.g.
+
+"HelloWorld": {
+  "Type": "Task", // Task state
+  "Resource": "arn:aws:lambda:us-east-1:123456789012:function:HelloFunction", // this lambda would execute the task
+  "Next": "AfterHelloWorldState", // this is the next state to go
+  "Comment": "Run the HelloWorld Lambda function" // Sample comment to understand
+}
+
+State share many common features like
+    Each state must have a Type field indicating what type of state it is.
+    Each state can have an optional Comment field to hold a human-readable comment about, or description of, the state.
+    Each state (except a Succeed or Fail state) requires a Next field or, alternatively, can become a terminal state by specifying an `End` field.
+
+Tip : A Choice state may have more than one Next, but only one within each Choice Rule. A Choice state cannot use End.
+Certain state types require additional fields, or may redefine common field usage.
+
+After you have created and executed Express Workflows, and if logging is enabled, you can access information about the execution in Amazon CloudWatch Logs.
+
+************************* Amazon State Language ***********************
+
+The Amazon States Language is a JSON-based, structured language used to define your state machine, a collection of states, that can do work (Task states),
+determine which states to transition to next (Choice states), stop an execution with an error (Fail states), and so on.
+
+
+E.g.
+
+{
+  "Comment": "An example of the Amazon States Language using a choice state.",
+  "StartAt": "FirstState", // stating state
+  "States": {
+    "FirstState": { // This is the first state
+      "Type": "Task", // of type task
+      "Resource": "arn:aws:lambda:us-east-1:123456789012:function:FUNCTION_NAME", // carried out by this lambda
+      "Next": "ChoiceState" // and then go to choice state to make a decison
+    },
+    "ChoiceState": {
+      "Type" : "Choice", // A choice state
+      "Choices": [ // various choices
+        {
+          "Variable": "$.foo", // if foo variable
+          "NumericEquals": 1, // equals to 1
+          "Next": "FirstMatchState" // go to first Match state
+        },
+        {
+          "Variable": "$.foo", // if equals to 2
+          "NumericEquals": 2, //
+          "Next": "SecondMatchState" // Then go to SecondMatchState
+        }
+      ],
+      "Default": "DefaultState" // if we can't make decision, go to default state
+    },
+
+    "FirstMatchState": {
+         "Type" : "Task", // task state
+              "Resource": "arn:aws:lambda:us-east-1:123456789012:function:OnFirstMatch", // executed by this lambda
+              "Next": "NextState" // Go to next State
+            },
+
+            "SecondMatchState": {
+              "Type" : "Task", // Another task
+              "Resource": "arn:aws:lambda:us-east-1:123456789012:function:OnSecondMatch",
+              "Next": "NextState" // Go to next state
+            },
+
+            "DefaultState": {
+              "Type": "Fail", // This is failed state
+              "Error": "DefaultStateError", // Error
+              "Cause": "No Matches!" // Cause
+            },
+
+            "NextState": {
+              "Type": "Task", // This is another task
+              "Resource": "arn:aws:lambda:us-east-1:123456789012:function:FUNCTION_NAME", // executed by thus lambda
+              "End": true // and end up here
+            }
+          }
+        }
+
+*************** Structure of ASL *************
+Comment (Optional)
+StartAt (Required) (Case Sensitive)
+TimeoutSeconds (Optional)
+    The maximum number of seconds an execution of the state machine can run.
+    If it runs longer than the specified time, the execution fails with a States.Timeout
+
+Version (Optional)
+    The version of the Amazon States Language used in the state machine (default is "1.0").
+States (Required)
+    An object containing a comma-delimited set of states.
+    The States field contains States.
+    States:[
+        "State1":{},
+        "State2":{}
+    ]
+
+A state machine is defined by the states it contains and the relationships between them.
+
+******************* Intrinsic functions ********************
+The Amazon States Language provides several intrinsic functions, also known as intrinsics, that help you perform basic data processing operations without using a Task state
+
+Intrinsics are constructs that look similar to functions in programming languages
+
+They can be used to help payload builders process the data going to and from the Resource field of a Task state.
+
+In Amazon States Language, intrinsic functions are grouped into the following categories, based on the type of data processing task that you want to perform:
+    To indicate the use of intrinsic functions, you must specify .$ in the key value in your state machine definitions, as shown in the following example:
+        "KeyId.$": "States.Array($.Id)"
+
+
+=> Intrinsics for arrays
+    Use the following intrinsics for performing array manipulations.
+
+States.Array
+    The States.Array intrinsic function takes zero or more arguments
+
+    E.g.
+    Input:
+        {
+          "Id": 123456
+        }
+    We can use
+       "BuildId.$": "States.Array($.Id)"
+
+    to get : BuildId : [123456]
+
+States.ArrayPartition
+    Use the States.ArrayPartition intrinsic function to partition a large array. You can also use this intrinsic to slice the data and then send the payload in smaller chunks.
+
+        E.g.
+            {"inputArray": [1,2,3,4,5,6,7,8,9] }
+            "inputArray.$": "States.ArrayPartition($.inputArray,4)"
+
+            Which will result in
+                {"inputArray": [ [1,2,3,4], [5,6,7,8], [9]] }
+
+States.ArrayContains
+    Use the States.ArrayContains intrinsic function to determine if a specific value is present in an array. For example, you can use this function to detect if there was an error in a Map state iteration.
+
+    Example
+        {
+           "inputArray": [1,2,3,4,5,6,7,8,9],
+           "lookingFor": 5
+        }
+
+    "contains.$": "States.ArrayContains($.inputArray, $.lookingFor)"
+
+    Result:
+        {"contains": true }
+
+There are many more like
+    States.ArrayRange
+    States.ArrayGetItem
+    States.ArrayLength
+    States.ArrayUnique
+
+=> Intrinsics for data encoding and decoding
+    States.Base64Encode
+    States.Base64Decode
+
+=> Intrinsic for hash calculation
+    States.Hash
+
+=> Intrinsics for JSON data manipulation
+    States.JsonMerge
+    States.StringToJson
+    States.JsonToString
+
+=> Intrinsics for Math operations
+    States.MathRandom
+    States.MathAdd
+
+=> Intrinsic for String operation
+        States.StringSplit
+
+=> Intrinsic for unique identifier generation
+    States.UUID
+
+=> Intrinsic for generic operation
+    States.Format
+

@@ -1,0 +1,33 @@
+*************** Activities *****************
+Activities are an AWS Step Functions feature that enables you to have a task in your state machine where the work is performed by a worker that can be hosted on Amazon Elastic Compute Cloud (Amazon EC2), Amazon Elastic Container Service (Amazon ECS), mobile devices—basically anywhere.
+
+In AWS Step Functions, activities are a way to associate code running somewhere (known as an activity worker) with a specific task in a state machine
+You can create an activity using the Step Functions console, or by calling CreateActivity
+
+An activity worker can be an application running on an Amazon EC2 instance, an AWS Lambda function, a mobile device:
+any application that can make an HTTP connection, hosted anywhere
+
+When Step Functions reaches an activity task state, the workflow waits for an activity worker to poll for a task
+
+GetActivityTask returns a response including input (a string of JSON input for the task) and a taskToken (a unique identifier for the task).
+After the activity worker completes its work, it can provide a report of its success or failure by using SendTaskSuccess or SendTaskFailure.
+
+************ APIs Related to Activity Tasks *******************
+CreateActivity
+GetActivityTask
+ListActivities
+SendTaskFailure
+SendTaskHeartbeat
+SendTaskSuccess
+
+
+********************* Waiting for an Activity Task to Complete *************************
+Configure how long a state waits by setting TimeoutSeconds in the task definition.
+To keep the task active and waiting, periodically send a heartbeat from your activity worker using SendTaskHeartbeat within the time configured in TimeoutSeconds
+By configuring a long timeout duration and actively sending a heartbeat, an activity in Step Functions can wait up to a year for an execution to complete.
+
+E.g.
+   Check this aws example
+   https://docs.aws.amazon.com/step-functions/latest/dg/example-ruby-activity-worker.html
+
+

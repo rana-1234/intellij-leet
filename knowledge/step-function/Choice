@@ -1,0 +1,151 @@
+*************** Choice ***************
+
+A Choice state ("Type": "Choice") adds conditional logic to a state machine.
+
+Fields
+    Choices (Required)
+        An array of Choice Rules that determines which state the state machine transitions to next
+        You must define at least one rule in the Choice state.
+
+    Default (Optional, Recommended)
+        The name of the state to transition to if none of the transitions in Choices is taken.
+
+* Choice states don't support the End field. In addition, they use Next only inside their Choices field.
+
+************ Choice Rules ************
+A Choice state must have a Choices field whose value is a non-empty array. Each element in this array is an object called Choice Rule, which contains the following:
+    A comparison
+        Two fields that specify an input variable to compare, the type of comparison, and the value to compare the variable to
+
+    A Next field – The value of this field must match a state name in the state machine.
+
+E.g.
+    {
+      "Variable": "$.foo",
+      "NumericEquals": 1, // if foo == 1 goto FirstMatchState
+      "Next": "FirstMatchState"
+    }
+
+    "And": [ // if all the statement are true
+         {
+            "Variable": "$.keyThatMightNotExist",
+            "IsPresent": true
+         },
+         {
+            "Variable": "$.keyThatMightNotExist",
+            "StringEquals": "foo"
+         }
+    ]
+
+
+Supported Conditions
+
+    And
+
+    BooleanEquals,BooleanEqualsPath
+
+    IsBoolean
+
+    IsNull
+
+    IsNumeric
+
+    IsPresent
+
+    IsString
+
+    IsTimestamp
+
+    Not
+
+    NumericEquals,NumericEqualsPath
+
+    NumericGreaterThan,NumericGreaterThanPath
+
+    NumericGreaterThanEquals,NumericGreaterThanEqualsPath
+
+    NumericLessThan,NumericLessThanPath
+
+    NumericLessThanEquals,NumericLessThanEqualsPath
+
+    Or
+
+    StringEquals,StringEqualsPath
+
+    StringGreaterThan,StringGreaterThanPath
+
+    StringGreaterThanEquals,StringGreaterThanEqualsPath
+
+    StringLessThan,StringLessThanPath
+
+    StringLessThanEquals,StringLessThanEqualsPath
+
+    StringMatches
+
+    TimestampEquals,TimestampEqualsPath
+
+    TimestampGreaterThan,TimestampGreaterThanPath
+
+    TimestampGreaterThanEquals,TimestampGreaterThanEqualsPath
+
+    TimestampLessThan,TimestampLessThanPath
+
+    TimestampLessThanEquals,TimestampLessThanEqualsPath
+
+Choice State Example
+
+"ChoiceStateX": {
+  "Type": "Choice",
+  "Choices": [
+    {
+      "Not": {
+        "Variable": "$.type",
+        "StringEquals": "Private"
+      },
+      "Next": "Public"
+    },
+    {
+      "Variable": "$.value",
+      "NumericEquals": 0,
+      "Next": "ValueIsZero"
+    },
+    {
+      "And": [
+        {
+          "Variable": "$.value",
+          "NumericGreaterThanEquals": 20
+        },
+        {
+          "Variable": "$.value",
+          "NumericLessThan": 30
+        }
+      ],
+      "Next": "ValueInTwenties"
+    }
+  ],
+  "Default": "DefaultState"
+},
+
+"Public": {
+  "Type" : "Task",
+  "Resource": "arn:aws:lambda:us-east-1:123456789012:function:Foo",
+  "Next": "NextState"
+},
+
+"ValueIsZero": {
+  "Type" : "Task",
+  "Resource": "arn:aws:lambda:us-east-1:123456789012:function:Zero",
+  "Next": "NextState"
+},
+
+"ValueInTwenties": {
+  "Type" : "Task",
+  "Resource": "arn:aws:lambda:us-east-1:123456789012:function:Bar",
+  "Next": "NextState"
+},
+
+"DefaultState": {
+  "Type": "Fail",
+  "Cause": "No Matches!"
+}
+

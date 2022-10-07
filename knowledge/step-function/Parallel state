@@ -1,0 +1,105 @@
+************** Parallel *********************
+
+The Parallel state ("Type": "Parallel") can be used to create parallel branches of execution in your state machine.
+
+Additional field
+
+Branches (Required)
+    An array of objects that specify state machines to execute in parallel. Each such state machine object must have fields named States and StartAt, whose meanings are exactly like those in the top level of a state machine.
+
+ResultPath (Optional)
+    Specifies where (in the input) to place the output of the branches
+
+ResultSelector (Optional)
+    Pass a collection of key value pairs, where the values are static or selected from the result
+
+Retry (Optional)
+    An array of objects, called Retriers, that define a retry policy in case the state encounters runtime errors
+
+Catch (Optional)
+    An array of objects, called Catchers, that define a fallback state that is executed if the state encounters runtime errors and its retry policy is exhausted or isn't defined
+
+A Parallel state causes AWS Step Functions to execute each branch, starting with the state named in that branch's StartAt field, as concurrently as possible, and wait until all branches terminate (reach a terminal state) before processing the Parallel state's Next field.
+
+E.g.
+    {
+      "Comment": "Parallel Example.",
+      "StartAt": "LookupCustomerInfo",
+      "States": {
+        "LookupCustomerInfo": {
+          "Type": "Parallel",
+          "End": true,
+          "Branches": [
+            {
+             "StartAt": "LookupAddress",
+             "States": {
+               "LookupAddress": {
+                 "Type": "Task",
+                 "Resource":
+                   "arn:aws:lambda:us-east-1:123456789012:function:AddressFinder",
+                 "End": true
+               }
+             }
+           },
+           {
+             "StartAt": "LookupPhone",
+             "States": {
+               "LookupPhone": {
+                 "Type": "Task",
+                 "Resource":
+                   "arn:aws:lambda:us-east-1:123456789012:function:PhoneFinder",
+                 "End": true
+               }
+             }
+           }
+          ]
+        }
+      }
+    }
+
+
+****************** Parallel State Input and Output Processing ******************
+
+A Parallel state provides each branch with a copy of its own input data (subject to modification by the InputPath field). It generates output that is an array with one element for each branch, containing the output from that branch.
+
+{
+  "Comment": "Parallel Example.",
+  "StartAt": "FunWithMath",
+  "States": {
+    "FunWithMath": {
+      "Type": "Parallel",
+      "End": true,
+      "Branches": [
+        {
+          "StartAt": "Add",
+          "States": {
+            "Add": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:us-east-1:123456789012:activity:Add",
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "Subtract",
+          "States": {
+            "Subtract": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:us-east-1:123456789012:activity:Subtract",
+              "End": true
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+
+If the FunWithMath state was given the array [3, 2] as input, then both the Add and Subtract states receive that array as input.
+
+Output : [ 5, 1 ]
+
+The output of the Add and Subtract tasks would be the sum of and difference between the array elements 3 and 2, which is 5 and 1, while the output of the Parallel state would be an array.
+
+Error Handling
+    If any branch fails, because of an unhandled error or by transitioning to a Fail state, the entire Parallel state is considered to have failed and all its branches are stopped. If the error is not handled by the Parallel state itself, Step Functions stops the execution with an error.

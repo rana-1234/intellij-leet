@@ -1,0 +1,63 @@
+****************** Step Function *****************
+
+AWS Step Functions is a `serverless orchestration service` that lets you integrate with
+    AWS Lambda functions and
+    other AWS services to build business-critical applications.
+
+Through Step Functions' graphical console, you see your application’s workflow as a series of event-driven steps.
+
+Step Functions is based on state machines and tasks.
+     A state machine is a workflow.
+     A task is a state in a workflow that represents a single unit of work that another AWS service performs.
+     Each step in a workflow is a state.
+
+Depending on your use case, you can have Step Functions call AWS services, such as Lambda, to perform tasks.
+
+*********** AWS SDK and Optimized integrations **************
+To call other AWS services, you can use Step Functions' AWS SDK integrations,
+    or you can use one of Step Functions' Optimized integrations.
+        * The AWS SDK integrations let you call any of the over two hundred AWS services directly from your state machine, giving you access to over nine thousand API actions.
+        * Step Functions' Optimized integrations have been customized to simplify usage in your state machines.
+
+
+******* Use cases ********
+1. Function orchestration
+        You create a workflow that runs a group of Lambda functions (steps) in a specific order.
+        One Lambda function's output passes to the next Lambda function's input.
+        The last step in your workflow gives a result. With Step Functions, you can see how each step in your workflow interacts with one other, so you can make sure that each step performs its intended function.
+
+        Input -> L1 -> L2 -> L3 ...... Ln -> Output
+
+2. Branching
+        We can have step function makes decision based on the `Choice` state's input
+
+        E.g
+            L1 -> can call L2 if something or can call L3 if something
+
+3. Error Handling
+        `Retry`
+            You can retry the execution based on certain scenario
+        `Catch`
+             Suggest something to do
+
+4. Human in loop
+    With a `callback and task token` you have step Function to tell Lambda to ask someone to interact with workflow.
+
+5. Parallel Processing
+    You can execute tasks parallel. E.g. Converting a single source of video into multiple different formats
+
+6. Dynamic Parallelism
+
+************** Service integrations ***********
+Step Functions integrates with multiple AWS services. To combine Step Functions with these services, use the following service integration patterns:
+
+   1. Request a response (default)
+        Call a service, and let Step Functions progress to the next state after it gets an HTTP response.
+   2. Run a job (.sync)
+        Call a service, and have Step Functions wait for a job to complete.
+   3. Wait for a callback with a task token (.waitForTaskToken)
+        Call a service with a task token, and have Step Functions wait until the task token returns with a callback.
+
+Checkout which AWS service supports which integration here :
+    https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html
+
