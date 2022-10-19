@@ -51,6 +51,10 @@ public class InputReader {
         return stringTokenizer.toString();
     }
 
+    public String readWord() throws IOException{
+        return readNextWord();
+    }
+
     public int [] readIntegerArray() throws Exception{
         return Arrays.stream(readLine().split(separator)).mapToInt(x -> Integer.parseInt(x)).toArray();
     }
