@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10c08ae9-30f1-4179-b6b3-e28949e50f58" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/codechef/EndCorr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/codechef/Longpali.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/codechef/Votersdi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P1335.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P1531.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P1832.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P38.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P692.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/codechef/Iarevers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P12.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P219.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coding/io/InputReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coding/io/InputReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +44,9 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.P692">
-    <configuration name="EndCorr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.codechef.EndCorr" />
+  <component name="RunManager" selected="Application.P219">
+    <configuration name="Iarevers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.codechef.Iarevers" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
@@ -64,8 +58,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P1832" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P1832" />
+    <configuration name="P12" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P12" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
@@ -77,8 +71,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P38" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P38" />
+    <configuration name="P219" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P219" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
@@ -118,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.P219" />
+        <item itemvalue="Application.Iarevers" />
+        <item itemvalue="Application.P12" />
         <item itemvalue="Application.P692" />
         <item itemvalue="Application.Votersdi" />
-        <item itemvalue="Application.EndCorr" />
-        <item itemvalue="Application.P38" />
-        <item itemvalue="Application.P1832" />
       </list>
     </recent_temporary>
   </component>
@@ -233,6 +227,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P1335.java</url>
           <line>18</line>
           <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P12.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/codechef/Iarevers.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
