@@ -1,8 +1,6 @@
 package com.coding.io;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
@@ -10,14 +8,21 @@ public class InputReader {
     private String separator;
     private BufferedReader bufferedReader;
     private StringTokenizer stringTokenizer;
-    public InputReader(String separator){
-        bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+    public InputReader(String separator, InputStreamReader is){
+        bufferedReader = new BufferedReader(is);
         this.separator = separator;
         stringTokenizer = new StringTokenizer("", separator);
     }
 
     public InputReader(){
-        this(" ");
+        this(" ", new InputStreamReader(System.in));
+    }
+    public InputReader(InputStreamReader is){
+        this(" ", is);
+    }
+
+    public InputReader(String separator){
+        this(" ", new InputStreamReader(System.in));
     }
 
     private String readEntireLine() throws IOException {
@@ -39,7 +44,7 @@ public class InputReader {
         return Integer.parseInt(readNextWord());
     }
 
-    public int readChar() throws IOException{
+    public char readChar() throws IOException{
         return readNextWord().charAt(0);
     }
 
