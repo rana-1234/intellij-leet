@@ -20,6 +20,14 @@ public class Utils {
         System.out.println("]");
     }
 
+    public static void printIntArray(int [] ar){
+        System.out.print("Printing Array : [");
+        for(int i = 0 ; i < ar.length ; i++){
+            System.out.print(ar[i] + " ");
+        }
+        System.out.println("]");
+    }
+
     public void findAllPathSum(TreeNode root, int targetSum, List<Integer> currentPathList){
         if( root == null) {
             return;
