@@ -1,0 +1,17 @@
+Google question lists
+https://leetcode.com/problem-list/top-google-questions/?difficulty=HARD&page=1&sorting=W3sic29ydE9yZGVyIjoiQVNDRU5ESU5HIiwib3JkZXJCeSI6IkFDX1JBVEUifV0%3D
+
+Tips :
+
+1. While coding, speak for every line
+2. Explain Approaches Time and space complexity
+3. codebase should be instinct (Minimum changes to scale)
+4. Can I use pen and paper ? for rough works. No external sites for help
+5. Code should be syntax error free.
+
+
+Important links
+
+// https://leetcode.com/srilekhapaul/
+// https://docs.google.com/spreadsheets/d/1A1EsEUAWGaumUcL_IYLAkVtShy14IBjxLDmjU0MMLWA/edit#gid=0
+// https://docs.google.com/spreadsheets/d/1J7jITUGb9H63Qg4UtiZib9rOAzi7QIfnpZtJ8u8I-dU/edit?copiedFromTrash#gid=864010572

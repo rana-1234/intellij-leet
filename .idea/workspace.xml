@@ -5,7 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10c08ae9-30f1-4179-b6b3-e28949e50f58" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P901.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/advancedalgo/HLD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/built_in_ds/Deque.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/built_in_ds/Heap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/built_in_ds/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/built_in_ds/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/codesignal/AlmostIncreasingSequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/codesignal/ReverseInParentheses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/codesignal/SortByHeight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ds/ArticulationPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ds/BellmanFordAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ds/BinaryIndexedTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ds/ConnectedComponentUndirectedGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ds/CycleInGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ds/DijkstraAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ds/FloydWarshallAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ds/InversionCount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ds/IsGraphStronglyConnected.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ds/KMPAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ds/KruskalAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ds/KthSmallestTwoSortedArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ds/KthSmallestUnsortedArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ds/PrimsAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ds/UnionSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/GoogleQuestionSet1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P1857.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P2316.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P2641.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P2642.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P30.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P386.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P420.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P785.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/QueueUsingStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/googleQuestion.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/BWC115.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P100077.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P1047.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P151.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P26.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2646.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2916.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2926.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2934.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P46.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/WC367.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ms/FirstProblem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/ms/SecondProblem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/other/CustomiseSandwich.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/other/LeastTimeToReachDestination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/other/MinimumSetSizeToRemove.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/other/Solution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +89,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
@@ -49,13 +100,13 @@
       <command value="gss" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.P901">
-    <configuration name="P1323" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P1323" />
+  <component name="RunManager" selected="Application.SecondProblem">
+    <configuration name="Deque" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.built_in_ds.Deque" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coding.leetcode.*" />
+          <option name="PATTERN" value="com.coding.built_in_ds.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -63,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P1544" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P1544" />
+    <configuration name="FirstProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.ms.FirstProblem" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coding.leetcode.*" />
+          <option name="PATTERN" value="com.coding.ms.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -76,12 +127,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P212" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P212" />
+    <configuration name="Heap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.built_in_ds.Heap" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coding.leetcode.*" />
+          <option name="PATTERN" value="com.coding.built_in_ds.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,12 +140,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P345" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P345" />
+    <configuration name="SecondProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.ms.SecondProblem" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coding.leetcode.*" />
+          <option name="PATTERN" value="com.coding.ms.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,12 +153,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P901" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P901" />
+    <configuration name="Stack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.built_in_ds.Stack" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coding.leetcode.*" />
+          <option name="PATTERN" value="com.coding.built_in_ds.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.P901" />
-        <item itemvalue="Application.P1544" />
-        <item itemvalue="Application.P1323" />
-        <item itemvalue="Application.P212" />
-        <item itemvalue="Application.P345" />
+        <item itemvalue="Application.SecondProblem" />
+        <item itemvalue="Application.FirstProblem" />
+        <item itemvalue="Application.Heap" />
+        <item itemvalue="Application.Deque" />
+        <item itemvalue="Application.Stack" />
       </list>
     </recent_temporary>
   </component>
@@ -358,6 +409,236 @@
           <line>12</line>
           <option name="timeStamp" value="70" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P901.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/codesignal/AlmostIncreasingSequence.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/other/Solution.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/KthSmallestTwoSortedArray.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/KthSmallestTwoSortedArray.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/KthSmallestTwoSortedArray.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/InversionCount.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/InversionCount.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/ArticulationPoint.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/ArticulationPoint.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/ArticulationPoint.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P386.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P785.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P1857.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P1857.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/PrimsAlgorithm.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/PrimsAlgorithm.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/DijkstraAlgorithm.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/DijkstraAlgorithm.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P2642.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P2642.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P2642.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/FloydWarshallAlgorithm.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/FloydWarshallAlgorithm.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/FloydWarshallAlgorithm.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P2641.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ds/KMPAlgorithm.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/WC367.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/BWC115.java</url>
+          <line>193</line>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/BWC115.java</url>
+          <line>185</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/BWC115.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/GoogleQuestionSet1.java</url>
+          <line>639</line>
+          <option name="timeStamp" value="158" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P30.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="160" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2916.java</url>
+          <line>148</line>
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2934.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="166" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2934.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2934.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P1473.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P1473.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="178" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P1473.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/advancedalgo/HLD.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="180" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/advancedalgo/HLD.java</url>
+          <line>144</line>
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2646.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="189" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P46.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="190" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ms/FirstProblem.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="192" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/ms/SecondProblem.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="193" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/contest/P6221.java</url>
           <line>6</line>
@@ -367,6 +648,10 @@
           </properties>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="185" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
