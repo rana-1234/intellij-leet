@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10c08ae9-30f1-4179-b6b3-e28949e50f58" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/DistinctSubSeq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/PalindromePartitionII.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P121.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P122.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P123.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P130.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P2571.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P2602.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P2606.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,9 +56,9 @@
       <command value="gss" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.PalindromePartitionII">
-    <configuration name="DistinctSubSeq" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.google.DistinctSubSeq" />
+  <component name="RunManager" selected="Application.P2571">
+    <configuration name="P123" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.google.P123" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
@@ -65,34 +70,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.ms.FirstProblem" />
-      <module name="coding" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.coding.ms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Heap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.built_in_ds.Heap" />
-      <module name="coding" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.coding.built_in_ds.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PalindromePartitionII" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.google.PalindromePartitionII" />
+    <configuration name="P130" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.google.P130" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
@@ -104,12 +83,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SecondProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.ms.SecondProblem" />
+    <configuration name="P2571" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.google.P2571" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coding.ms.*" />
+          <option name="PATTERN" value="com.coding.google.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="P2602" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.google.P2602" />
+      <module name="coding" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coding.google.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="P2606" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.google.P2606" />
+      <module name="coding" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coding.google.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PalindromePartitionII" />
-        <item itemvalue="Application.DistinctSubSeq" />
-        <item itemvalue="Application.SecondProblem" />
-        <item itemvalue="Application.FirstProblem" />
-        <item itemvalue="Application.Heap" />
+        <item itemvalue="Application.P2571" />
+        <item itemvalue="Application.P2602" />
+        <item itemvalue="Application.P2606" />
+        <item itemvalue="Application.P130" />
+        <item itemvalue="Application.P123" />
       </list>
     </recent_temporary>
   </component>
@@ -589,6 +594,36 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/coding/ms/SecondProblem.java</url>
           <line>45</line>
           <option name="timeStamp" value="193" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/PalindromePartitionII.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P123.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P130.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="203" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P2602.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="206" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P2602.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P2571.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="208" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/contest/P6221.java</url>
