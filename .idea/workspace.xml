@@ -5,17 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10c08ae9-30f1-4179-b6b3-e28949e50f58" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/dp/P1143.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/dp/P139.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/dp/P198.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/dp/P213.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/dp/P300.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/dp/P322.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/dp/P39.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/dp/P55.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/dp/P62.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/dp/P70.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/dp/P91.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P552.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P934.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/tree/P100.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/tree/P102.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/tree/P104.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/tree/P105.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/tree/P124.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/tree/P208.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/tree/P211.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/tree/P212.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/tree/P226.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/tree/P230.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/tree/P235.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/tree/P297.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/tree/P572.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/tree/P98.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,13 +65,13 @@
       <command value="gss" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.P55">
-    <configuration name="P198" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.dp.P198" />
+  <component name="RunManager" selected="Application.P934">
+    <configuration name="P105" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.tree.P105" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coding.dp.*" />
+          <option name="PATTERN" value="com.coding.tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -74,12 +79,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P213" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.dp.P213" />
+    <configuration name="P212" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.tree.P212" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coding.dp.*" />
+          <option name="PATTERN" value="com.coding.tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,12 +92,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P55" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.dp.P55" />
+    <configuration name="P297" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.tree.P297" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coding.dp.*" />
+          <option name="PATTERN" value="com.coding.tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,12 +105,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P62" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.dp.P62" />
+    <configuration name="P552" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.google.P552" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coding.dp.*" />
+          <option name="PATTERN" value="com.coding.google.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,12 +118,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P91" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.dp.P91" />
+    <configuration name="P934" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.google.P934" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coding.dp.*" />
+          <option name="PATTERN" value="com.coding.google.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.P55" />
-        <item itemvalue="Application.P62" />
-        <item itemvalue="Application.P91" />
-        <item itemvalue="Application.P213" />
-        <item itemvalue="Application.P198" />
+        <item itemvalue="Application.P934" />
+        <item itemvalue="Application.P552" />
+        <item itemvalue="Application.P212" />
+        <item itemvalue="Application.P297" />
+        <item itemvalue="Application.P105" />
       </list>
     </recent_temporary>
   </component>
@@ -643,6 +648,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/coding/dp/P55.java</url>
           <line>17</line>
           <option name="timeStamp" value="216" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/tree/P105.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="220" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P552.java</url>
+          <line>116</line>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/google/P552.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="227" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/contest/P6221.java</url>
