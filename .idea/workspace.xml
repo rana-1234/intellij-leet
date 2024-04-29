@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10c08ae9-30f1-4179-b6b3-e28949e50f58" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P1470.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P347.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P382.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/google/P931.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P100278.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P100286.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2382.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P3129.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/tree/P2538.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/spoj/Kamil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2065.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2977.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P3017.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coding/help/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coding/help/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +52,7 @@
       <command value="gss" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.P3129">
+  <component name="RunManager" selected="Application.P2065">
     <configuration name="P100278" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P100278" />
       <module name="coding" />
@@ -74,8 +66,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P100286" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P100286" />
+    <configuration name="P2065" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P2065" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
@@ -87,8 +79,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P2382" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P2382" />
+    <configuration name="P2977" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P2977" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
@@ -100,12 +92,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P2538" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.tree.P2538" />
+    <configuration name="P3017" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P3017" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coding.leetcode.tree.*" />
+          <option name="PATTERN" value="com.coding.leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,11 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.P2065" />
+        <item itemvalue="Application.P2977" />
+        <item itemvalue="Application.P3017" />
         <item itemvalue="Application.P3129" />
         <item itemvalue="Application.P100278" />
-        <item itemvalue="Application.P100286" />
-        <item itemvalue="Application.P2382" />
-        <item itemvalue="Application.P2538" />
       </list>
     </recent_temporary>
   </component>
@@ -708,6 +700,36 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P100278.java</url>
           <line>13</line>
           <option name="timeStamp" value="254" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P3129.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="256" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2977.java</url>
+          <line>126</line>
+          <option name="timeStamp" value="257" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2977.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="268" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2977.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="269" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2065.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="274" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/P2065.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="275" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/contest/P6221.java</url>
