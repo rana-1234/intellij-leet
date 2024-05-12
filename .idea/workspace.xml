@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10c08ae9-30f1-4179-b6b3-e28949e50f58" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/P3144.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coding/leetcode/tree/P310.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +55,7 @@
       <command value="gss" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.P3144">
+  <component name="RunManager" selected="Application.P310">
     <configuration name="LowestCommonAncestor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.coding.ds.LowestCommonAncestor" />
       <module name="coding" />
@@ -82,12 +82,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P3144" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P3144" />
+    <configuration name="P310" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.tree.P310" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coding.leetcode.*" />
+          <option name="PATTERN" value="com.coding.leetcode.tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,12 +95,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P332" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.graph.P332" />
+    <configuration name="P3144" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coding.leetcode.P3144" />
       <module name="coding" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coding.leetcode.graph.*" />
+          <option name="PATTERN" value="com.coding.leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.P310" />
         <item itemvalue="Application.P3144" />
         <item itemvalue="Application.P179" />
         <item itemvalue="Application.P743" />
         <item itemvalue="Application.LowestCommonAncestor" />
-        <item itemvalue="Application.P332" />
       </list>
     </recent_temporary>
   </component>
@@ -749,6 +749,21 @@
           <line>25</line>
           <option name="timeStamp" value="286" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/tree/P310.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="290" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/tree/P310.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="292" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/tree/P310.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="294" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/coding/leetcode/contest/P6221.java</url>
           <line>6</line>
@@ -764,6 +779,12 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="secondLargestHeight" language="JAVA" />
+        <watch expression="largestHeight" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
