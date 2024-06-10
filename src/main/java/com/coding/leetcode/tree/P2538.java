@@ -6,7 +6,6 @@ import java.util.List;
 
 public class P2538 {
 
-
     private List<Integer> [] tree;
     private int [] price;
 
