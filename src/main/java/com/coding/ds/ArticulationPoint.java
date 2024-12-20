@@ -60,10 +60,13 @@ public class ArticulationPoint {
                 }
             }
             else{
-                // this is a back edge condition where we are visiting a node from u to v (already visited earlier and not the parent)
+                // this is a back edge condition where we are visiting a node from u to v (already visited earlier and not the parent) = v is already visited
                 // root node
                 if ( u != -1)
                     minimumBackEdgeDiscoveryTime[v] = Math.min(minimumBackEdgeDiscoveryTime[v], discoveryTime[u]); // when the ancestor was discovered
+
+                // Updating the backEdgeDiscoveryTime of v as the minimumBackEdgeDiscoveryTime of existing or discoveryTime of u.
+                // Later it would be updated for u as well
 
             }
         }
