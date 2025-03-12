@@ -27,6 +27,8 @@ Examples:
         If entire sum is not divisible by k, return n
         if no left_most or right_index, return 0 or -1
 
+        Since entire sum is divisible by k, it means, the first non-zero mod element would contribute longest either from left end or right end.
+        (since removing it would make the entire sum not divisible by k
 
      */
 

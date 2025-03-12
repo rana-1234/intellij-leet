@@ -20,6 +20,11 @@ public class Utils {
         System.out.println("]");
     }
 
+
+    public static void printIntArray(int [] ar, String message){
+        System.out.print(message + " ");
+        printIntArray(ar);
+    }
     public static void printIntArray(int [] ar){
         System.out.print("Printing Array : [");
         for(int i = 0 ; i < ar.length ; i++){
